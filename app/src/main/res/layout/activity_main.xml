@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mainTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/historyTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <TextView
+        android:id="@+id/bilNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/vector_bilname"
+        android:text="Enter bill name:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/bilName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Give it a name"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/numPersonLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/vector_person"
+        android:text="Number of people:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/numPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="How many people"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/totalBillLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/vector_balance"
+        android:text="Total bill balance:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/totalBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Bill balance here"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/breakdownType"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/equalType"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Equal"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/percentageType"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Percentage"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/amountType"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Amount"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="360dp">
+
+        <LinearLayout
+            android:id="@+id/personList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/splitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Split now"
+        app:iconTint="#7E1E1E" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColorLink="#673AB7"
+            app:iconPadding="8dp"
+            android:backgroundTint="#E9E9EB"
+            android:textColor="#000000"
+            android:drawableLeft="@drawable/vector_save"
+            app:iconTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:drawableLeft="@drawable/vector_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:backgroundTint="#E9E9EB"
+            android:textColorLink="#E6EEFA"
+            android:textColor="#000000"
+            app:iconPadding="8dp"
+            app:iconTint="#FFFFFF" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday" />
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>
